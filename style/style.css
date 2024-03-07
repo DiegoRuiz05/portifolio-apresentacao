@@ -1,0 +1,243 @@
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+}
+
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #daa520;
+    --cor-hover: #272727;
+
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+
+    /* Cria variaveis no CSS */
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    /*importante*/
+    /*iniciar zerando estes*/
+}
+
+body {
+    /* height: 100vh; */
+    /*faz com que use 100% da tela do usuario*/
+    box-sizing: border-box;
+    /*para fazer com que as imagens não saiam do enquadramento da tela*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 10%;
+
+
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+
+}
+
+
+.cabecalho__menu__links {
+    font-family: var(--fonte-secundaria);
+    size: 24px;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+
+}
+
+.apresentacao {
+    padding: 5% 10%;
+    /*marin dos elementos. Sendo o primeiro vertical e p segundo horizontal */
+    display: flex;
+    /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/ (dar uma olhada) Serve para colocar os textos em linha em conjunto com a tag pai(apresentacao)*/
+    align-items: center;
+    /*faz com que os itens fiquem alinhados em si no meio*/
+    justify-content: space-between;
+    gap: 82px;
+    
+}
+
+img {
+    height: 550px;
+    width: 488px;
+    border-radius: 16px;
+}
+
+.aprentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /*Faz com que o texto fique em coluna*/
+    gap: 40px;
+    /*é o espaçamento entre as linhas e colunas do projeto*/
+}
+
+
+
+.aprentacao__conteudo__titulo {
+    /* font-size: 36px;     Aqui o texto não é auto-adaptativo, portanto é necessario utilizar medidas adaptativas, como o "rem" que a cada 16px significa 1 rem*/
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao__conteudo__paragrafo {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*espaçamento dos elementos*/
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    size: 24px;
+}
+
+.apresentacao__links_link {
+    /* background-color: #daa520; */
+    display: flex;
+    /*Isso define um contêiner flexível; inline ou bloco dependendo do valor fornecido. Ele permite um contexto flexível para todos os seus filhos diretos.*/
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 12px;
+    /*borda arredondada*/
+    font-size: 1.5rem;
+    font-weight: 600;
+    /*é a grossura da fonte*/
+    padding: 21.5px 0;
+    text-decoration: none;
+    /*tirar a caracteristica azul do hiperlink*/
+    color: white;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links_link:hover {
+    cursor: pointer;
+    background-color: var(--cor-hover);
+}
+
+.apresentacao__imagem {
+    width: 40%;
+    height: 40%;
+}
+
+.apresentacao__links__imagem {
+    width: 32px;
+    height: 32px;
+}
+
+.hoverDiego:hover {
+    size: 30px;
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__rodaPe {
+    text-align: center;
+    padding: 24px;
+    background-color: var(--cor-terciaria);
+    font-family: var(--fonte-secundaria);
+    size: 24px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+.aprentacao__conteudo__titulo__curriculo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+    width: 90%;
+
+}
+
+
+.apresentacao__curriculo__subtitulo {
+    font-size: 1.68rem;
+    font-family: var(--fonte-primaria);
+
+
+
+}
+
+.apresentacao__conteudo__paragrafo__curriculo {
+    font-size: 1.125rem;
+    font-family: var(--fonte-secundaria);
+
+}
+
+@media (max-width: 1200px) {  
+    .cabecalho{
+        padding: 8%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+
+    .apresentacao {
+        padding: 5%;
+        flex-direction: column-reverse;
+
+
+    }
+/* Isso daqui faz com que crie-se uma condição que diz: esse modelo será utilizado para telas que correspondam a tal tamanho(definir na condição) 
+, ou seja torne o conteudo uma coluna reversa.
+Portanto essencial para a resonsividade */
+
+
+.aprentacao__conteudo{
+    width: auto;
+    /* Serve para fazer com que a largura preencha automaticamente todo o lado da tela  */
+}
+}
+
+
+@media (max-width:480px) {
+
+
+.aprentacao__conteudo__titulo{
+    font-size:1.80rem;
+}
+
+.apresentacao__conteudo__paragrafo{
+    font-size: 1.05rem;
+}
+
+.apresentacao__imagem{
+    width: 50%;
+    height: 50%;
+}
+
+
+
+}
